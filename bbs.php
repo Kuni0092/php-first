@@ -7,13 +7,8 @@ try{
   exit;
 }
 
-
-//外部ファイルからデータを読み込み
-
 $sql = "SELECT * FROM bbstable";
 $posts = file($dataFile, FILE_IGNORE_NEW_LINES);
-
-//もし投稿があったら、読み込んだデータに入力されたデータを追加して書き込み
 
 if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['message'])) {
    if(empty($_POST['user'])) {
