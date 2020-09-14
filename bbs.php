@@ -12,7 +12,8 @@ $posts = file($dataFile, FILE_IGNORE_NEW_LINES);
 
 if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['message'])) {
    if(empty($_POST['user'])) {
-      $newData = $_POST['message']."|ななしさん";
+      $newData = $_POST['message']."|     
+      ";
     } else {
       $newData = $_POST['message']."|".$_POST['user'];
     }
